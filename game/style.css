@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #0B3954;
+  font-family: 'Inter', sans-serif;
+  color: #087E8B;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+  width: 40rem;
+  height: 40rem;
+
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-template-rows: repeat(3);
+  gap: 1;
+}
+
+.space {
+  width: 14rem;
+  height: 14rem;
+  border: solid 4px #087E8B;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#first,
+#second,
+#third {
+  border-top: none;
+}
+
+#first,
+#fourth,
+#seventh {
+  border-left: none;
+}
+
+#third,
+#sixth,
+#ninth {
+  border-right: none;
+}
+
+#seventh,
+#eighth,
+#ninth {
+  border-bottom: none;
+}
+
+.x {
+  width: 12rem;
+  height: 12rem;
+}
+
+.o {
+  width: 10rem;
+  height: 10rem;
+}
+
+/* VICTORY/TIE DISPLAY */
+
+.victory {
+  position: absolute;
+  top: 15%;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+/* Restart button */
+
+.restart {
+  position: absolute;
+  bottom: 12%;
+  font-size: 3rem;
+  background: #087E8B;
+  color: #0B3954;
+  padding-inline: 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
